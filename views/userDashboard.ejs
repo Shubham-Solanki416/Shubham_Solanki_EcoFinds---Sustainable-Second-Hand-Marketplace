@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFinds - User Profile</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/userDashboard.css">
+    <style>
+        /* Additional styles for the cart icon */
+        .nav-cart {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .cart-icon {
+            font-size: 1.2rem;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .cart-icon:hover {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: var(--primary);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--primary);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* Mobile responsiveness for cart */
+        @media (max-width: 768px) {
+            .nav-cart {
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <span class="logo-text">EcoFinds</span>
+            </div>
+
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search for products...">
+                </div>
+            </div>
+
+            <div class="nav-user">
+                <a href="#" class="nav-link">Home</a>
+                <a href="landing.html#categories" class="nav-link">Categories</a>
+                <a href="#" class="nav-link active">Profile</a>
+
+                <!-- Cart Icon -->
+                <div class="nav-cart">
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="profile-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>User Dashboard</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-target="profile-info">
+                    <i class="fas fa-user"></i>
+                    <span>Profile Info</span>
+                </a>
+                <a href="#" class="nav-item" data-target="my-listings">
+                    <i class="fas fa-list"></i>
+                    <span>My Listings</span>
+                </a>
+                <a href="#" class="nav-item" data-target="my-purchases">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>My Purchases</span>
+                </a>
+                <a href="#" class="nav-item" data-target="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-item logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Profile Info Section -->
+            <section id="profile-info" class="content-section active">
+                <div class="section-header">
+                    <h2>Profile Information</h2>
+                    <button class="edit-btn" id="editProfileBtn">
+                        <i class="fas fa-edit"></i>
+                        Edit Profile
+                    </button>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="avatar-container">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=2ecc71&color=fff&size=120"
+                                alt="User Avatar" class="user-avatar">
+                            <button class="avatar-edit-btn">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="user-name">John Doe</h1>
+                            <p class="user-member-since">Member since January 2023</p>
+                            <div class="user-stats">
+                                <div class="stat">
+                                    <span class="stat-number">24</span>
+                                    <span class="stat-label">Listings</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">18</span>
+                                    <span class="stat-label">Purchases</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">4.8</span>
+                                    <span class="stat-label">Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <h3>Personal Information</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <label>Full Name</label>
+                                <p>John Doe</p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Email Address</label>
+                                <p>john.doe@example.com</p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Phone Number</label>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Location</label>
+                                <p>San Francisco, CA</p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Joined Date</label>
+                                <p>January 15, 2023</p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Last Login</label>
+                                <p>Today at 2:30 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Listings Section -->
+            <section id="my-listings" class="content-section">
+                <div class="section-header">
+                    <h2>My Listings</h2>
+                    <button class="add-listing-btn">
+                        <i class="fas fa-plus"></i>
+                        Add New Listing
+                    </button>
+                </div>
+
+                <div class="listings-container">
+                    <div class="listing-card">
+                        <div class="listing-image">
+                            <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                alt="Vintage Denim Jacket">
+                            <span class="listing-status active">Active</span>
+                        </div>
+                        <div class="listing-info">
+                            <h3 class="listing-title">Vintage Denim Jacket</h3>
+                            <p class="listing-desc">High-quality vintage denim jacket from the 90s</p>
+                            <div class="listing-meta">
+                                <span class="listing-price">$35.00</span>
+                                <span class="listing-views"><i class="fas fa-eye"></i> 128</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing-card">
+                        <div class="listing-image">
+                            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                alt="Wooden Chair">
+                            <span class="listing-status active">Active</span>
+                        </div>
+                        <div class="listing-info">
+                            <h3 class="listing-title">Reclaimed Wood Chair</h3>
+                            <p class="listing-desc">Beautiful chair made from reclaimed wood</p>
+                            <div class="listing-meta">
+                                <span class="listing-price">$75.00</span>
+                                <span class="listing-views"><i class="fas fa-eye"></i> 86</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing-card">
+                        <div class="listing-image">
+                            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="Ceramic Plates">
+                            <span class="listing-status sold">Sold</span>
+                        </div>
+                        <div class="listing-info">
+                            <h3 class="listing-title">Handmade Ceramic Plates</h3>
+                            <p class="listing-desc">Set of 4 handmade ceramic plates</p>
+                            <div class="listing-meta">
+                                <span class="listing-price">$45.00</span>
+                                <span class="listing-views"><i class="fas fa-eye"></i> 142</span>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="action-btn edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="action-btn delete"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Purchases Section -->
+            <section id="my-purchases" class="content-section">
+                <div class="section-header">
+                    <h2>My Purchases</h2>
+                    <div class="filter-dropdown">
+                        <select>
+                            <option>All Purchases</option>
+                            <option>Last 30 Days</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="purchases-container">
+                    <div class="purchase-card">
+                        <div class="purchase-image">
+                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+                                alt="Laptop">
+                        </div>
+                        <div class="purchase-info">
+                            <h3 class="purchase-title">Refurbished Laptop</h3>
+                            <p class="purchase-desc">Fully refurbished laptop with 1-year warranty</p>
+                            <div class="purchase-meta">
+                                <span class="purchase-price">$299.00</span>
+                                <span class="purchase-date">Purchased on: Oct 12, 2023</span>
+                            </div>
+                            <div class="purchase-status delivered">
+                                <i class="fas fa-check-circle"></i>
+                                Delivered
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="purchase-card">
+                        <div class="purchase-image">
+                            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80"
+                                alt="Tablet">
+                        </div>
+                        <div class="purchase-info">
+                            <h3 class="purchase-title">Used Tablet</h3>
+                            <p class="purchase-desc">Slightly used tablet in perfect condition</p>
+                            <div class="purchase-meta">
+                                <span class="purchase-price">$150.00</span>
+                                <span class="purchase-date">Purchased on: Sep 28, 2023</span>
+                            </div>
+                            <div class="purchase-status delivered">
+                                <i class="fas fa-check-circle"></i>
+                                Delivered
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="purchase-card">
+                        <div class="purchase-image">
+                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+                                alt="Smartwatch">
+                        </div>
+                        <div class="purchase-info">
+                            <h3 class="purchase-title">Smartwatch</h3>
+                            <p class="purchase-desc">Like-new smartwatch with all accessories</p>
+                            <div class="purchase-meta">
+                                <span class="purchase-price">$89.00</span>
+                                <span class="purchase-date">Purchased on: Sep 15, 2023</span>
+                            </div>
+                            <div class="purchase-status delivered">
+                                <i class="fas fa-check-circle"></i>
+                                Delivered
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="section-header">
+                    <h2>Account Settings</h2>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-card">
+                        <h3>Notification Preferences</h3>
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div class="setting-info">
+                                <h4>Email Notifications</h4>
+                                <p>Receive emails about your account activity</p>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div class="setting-info">
+                                <h4>Promotional Emails</h4>
+                                <p>Receive emails about new features and promotions</p>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <div class="setting-info">
+                                <h4>SMS Notifications</h4>
+                                <p>Receive text messages about important updates</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Privacy & Security</h3>
+                        <div class="setting-item">
+                            <button class="settings-btn">
+                                <i class="fas fa-lock"></i>
+                                Change Password
+                            </button>
+                        </div>
+
+                        <div class="setting-item">
+                            <button class="settings-btn">
+                                <i class="fas fa-user-shield"></i>
+                                Two-Factor Authentication
+                            </button>
+                        </div>
+
+                        <div class="setting-item">
+                            <button class="settings-btn">
+                                <i class="fas fa-download"></i>
+                                Download Your Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/userDashboard.js"></script>
+    <script>
+        // Add cart functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartIcon = document.querySelector('.cart-icon');
+            const cartCount = document.querySelector('.cart-count');
+
+            if (cartIcon) {
+                cartIcon.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    alert('Cart page would open here. You have ' + cartCount.textContent + ' items in your cart.');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

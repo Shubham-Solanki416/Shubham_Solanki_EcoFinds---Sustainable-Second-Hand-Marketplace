@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFinds - Cart</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <h1>EcoFinds</h1>
+            </div>
+            <nav>
+                <!-- <a href="#"><i class="fas fa-search"></i></a> -->
+                <!-- <a href="#"><i class="fas fa-user"></i></a> -->
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h2>Your Cart</h2>
+                    <span class="items-count">3 items</span>
+                </div>
+
+                <div class="cart-items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="jacket.avif"
+                                alt="Vintage Denim Jacket">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-title">Vintage Denim Jacket</h3>
+                            <p class="item-category">Clothing</p>
+                            <div class="item-price">Rs. 1,499</div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus" data-id="1">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn plus" data-id="1">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item" data-id="1">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="wooden.avif"
+                                alt="Wooden Coffee Table">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-title">Wooden Coffee Table</h3>
+                            <p class="item-category">Furniture</p>
+                            <div class="item-price">Rs. 3,999</div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus" data-id="2">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn plus" data-id="2">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item" data-id="2">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="novel.avif"
+                                alt="Classic Novel Collection">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-title">Classic Novel Collection</h3>
+                            <p class="item-category">Books</p>
+                            <div class="item-price">Rs. 899</div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus" data-id="3">-</button>
+                                <span class="quantity">1</span>
+                                <button class="quantity-btn plus" data-id="3">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item" data-id="3">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>Rs. 6,397</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Rs. 200</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>Rs. 320</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>Rs. 6,917</span>
+                    </div>
+                </div>
+
+                <button class="checkout-btn">
+                    Proceed to Checkout
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="/cart.js"></script>
+</body>
+
+</html>

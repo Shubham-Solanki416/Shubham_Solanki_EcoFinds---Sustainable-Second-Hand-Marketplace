@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFinds - Add New Product</title>
+    <link rel="icon" type="image/png" href="/logo.jpg">
+    <link rel="stylesheet" href="/newProduct.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">MarketPlace</a>
+            <div class="header-actions">
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <h1 class="form-title">Add a New Product</h1>
+
+                <form id="newListingForm" class="listing-form" method="post" action="/products" enctype="multipart/form-data">
+                    <div class="form-section">
+                        <h2 class="section-title">Product Information</h2>
+
+                        <div class="image-upload-container">
+                            <div class="image-preview" id="imagePreview">
+                                <i class="fas fa-camera"></i>
+                                <p>Upload Product Image</p>
+                            </div>
+                            <input type="file" id="productImage" name="productImage" accept="image/*" class="image-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productTitle">Product Title *</label>
+                            <input type="text" id="productTitle" name="productTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productCategory">Product Category *</label>
+                            <select id="productCategory" name="productCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Books">Books</option>
+                                <option value="Sports Equipment">Sports Equipment</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDescription">Product Description *</label>
+                            <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price">Price ($) *</label>
+                                <input type="number" id="price" name="price" min="0" step="0.01" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantity">Quantity *</label>
+                                <input type="number" id="quantity" name="quantity" min="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="condition">Condition *</label>
+                            <select id="condition" name="condition" required>
+                                <option value="">Select condition</option>
+                                <option value="New">New</option>
+                                    <option value="Like New">Like New</option>
+                                    <option value="Good">Good</option>
+                                    <option value="Fair">Fair</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-title">Additional Details</h2>
+
+                        <div class="form-group">
+                            <label for="yearManufacture">Year of Manufacture (if applicable)</label>
+                            <input type="number" id="yearManufacture" name="yearManufacture" min="1900" max="2023">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="brand">Brand</label>
+                            <input type="text" id="brand" name="brand">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <input type="text" id="model" name="model">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="length">Length (cm)</label>
+                                <input type="number" id="length" name="length" min="0" step="0.1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="width">Width (cm)</label>
+                                <input type="number" id="width" name="width" min="0" step="0.1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="height">Height (cm)</label>
+                                <input type="number" id="height" name="height" min="0" step="0.1">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" name="weight" min="0" step="0.1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="material">Material</label>
+                            <input type="text" id="material" name="material">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="color">Color</label>
+                            <input type="text" id="color" name="color">
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="originalPackaging" name="originalPackaging">
+                                <span class="checkmark"></span>
+                                Original Packaging Included
+                            </label>
+
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="manualIncluded" name="manualIncluded">
+                                <span class="checkmark"></span>
+                                Manual/Instructions Included
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="workingCondition">Working Condition Description</label>
+                            <textarea id="workingCondition" name="workingCondition" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="/newProduct.js"></script>
+</body>
+
+</html>

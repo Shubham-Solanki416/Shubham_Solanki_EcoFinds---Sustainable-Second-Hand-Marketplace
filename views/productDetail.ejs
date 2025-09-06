@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFinds - Product Details</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/productDetail.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <span class="logo-text">EcoFinds</span>
+            </div>
+
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search for products...">
+                </div>
+            </div>
+
+            <div class="nav-user">
+                <a href="/products" class="nav-link">Home</a>
+                <a href="#categories">Categories</a>
+                <!-- <a href="landing.html" class="nav-link">Categories</a> -->
+                <a href="/users/dashboard" class="nav-link">Profile</a>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/products">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#">Clothing</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="#">Jackets</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Vintage Denim Jacket</span>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="container">
+            <div class="product-content">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                            alt="Vintage Denim Jacket" id="mainImage">
+                        <button class="zoom-btn" id="zoomBtn">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="image-thumbnails">
+                        <div class="thumbnail active"
+                            data-image="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80">
+                            <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                                alt="Front view">
+                        </div>
+                        <div class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                                alt="Back view">
+                        </div>
+                        <div class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                                alt="Side view">
+                        </div>
+                        <div class="thumbnail"
+                            data-image="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                                alt="Detail view">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <div class="product-header">
+                        <h1 class="product-title">Vintage Denim Jacket</h1>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(42 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$35.00</span>
+                            <span class="original-price">$50.00</span>
+                            <span class="discount">30% off</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>High-quality vintage denim jacket from the 90s. This classic piece is made from durable denim
+                            and features a timeless design that never goes out of style. Perfect for layering in cooler
+                            weather.</p>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Condition:</span>
+                            <span class="meta-value">Good</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Category:</span>
+                            <span class="meta-value">Clothing > Jackets</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Seller:</span>
+                            <span class="meta-value">EcoFashionista</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Location:</span>
+                            <span class="meta-value">San Francisco, CA</span>
+                        </div>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label class="option-label">Size:</label>
+                            <div class="size-options">
+                                <input type="radio" name="size" id="size-s" value="S">
+                                <label for="size-s" class="size-option">S</label>
+
+                                <input type="radio" name="size" id="size-m" value="M" checked>
+                                <label for="size-m" class="size-option">M</label>
+
+                                <input type="radio" name="size" id="size-l" value="L">
+                                <label for="size-l" class="size-option">L</label>
+
+                                <input type="radio" name="size" id="size-xl" value="XL">
+                                <label for="size-xl" class="size-option">XL</label>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label class="option-label">Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" id="decreaseQty">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="quantity-btn" id="increaseQty">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            Add to Wishlist
+                        </button>
+                    </div>
+
+                    <div class="product-shipping">
+                        <div class="shipping-info">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping for orders over $50</span>
+                        </div>
+                        <div class="shipping-info">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day return policy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="specs">Specifications</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews (42)</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>Product Description</h3>
+                        <p>This vintage denim jacket is a timeless piece from the 1990s. Made from high-quality denim,
+                            it features a classic design with a regular fit that works well for various body types. The
+                            jacket shows slight signs of wear, which adds to its authentic vintage character.</p>
+
+                        <h4>Features:</h4>
+                        <ul>
+                            <li>100% cotton denim</li>
+                            <li>Classic collar design</li>
+                            <li>Front button closure</li>
+                            <li>Chest pockets</li>
+                            <li>Adjustable cuffs</li>
+                            <li>Regular fit</li>
+                        </ul>
+
+                        <h4>Condition:</h4>
+                        <p>This jacket is in good pre-owned condition. There is slight fading consistent with age and
+                            some minor wear on the cuffs, but no tears or significant damage. All buttons are original
+                            and functional.</p>
+                    </div>
+
+                    <div class="tab-pane" id="specs">
+                        <h3>Specifications</h3>
+                        <div class="specs-table">
+                            <div class="spec-row">
+                                <div class="spec-name">Material</div>
+                                <div class="spec-value">100% Cotton Denim</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Color</div>
+                                <div class="spec-value">Blue</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Style</div>
+                                <div class="spec-value">Casual</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Closure</div>
+                                <div class="spec-value">Button Front</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Pockets</div>
+                                <div class="spec-value">2 Chest Pockets</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Condition</div>
+                                <div class="spec-value">Good (Pre-owned)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Brand</div>
+                                <div class="spec-value">Vintage (Unbranded)</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-name">Era</div>
+                                <div class="spec-value">1990s</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <div class="rating-score">4.5</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">42 reviews</div>
+                            </div>
+
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <span class="bar-label">5 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar-fill" style="width: 70%;"></div>
+                                    </div>
+                                    <span class="bar-count">29</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="bar-label">4 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar-fill" style="width: 20%;"></div>
+                                    </div>
+                                    <span class="bar-count">8</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="bar-label">3 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar-fill" style="width: 7%;"></div>
+                                    </div>
+                                    <span class="bar-count">3</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="bar-label">2 stars</span>
+                                    <div class="bar-container">
+                                        <div class="bar-fill" style="width: 2%;"></div>
+                                    </div>
+                                    <span class="bar-count">1</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="bar-label">1 star</span>
+                                    <div class="bar-container">
+                                        <div class="bar-fill" style="width: 2%;"></div>
+                                    </div>
+                                    <span class="bar-count">1</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="reviewer">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+J&background=3498db&color=fff"
+                                        alt="Sarah J" class="reviewer-avatar">
+                                    <div class="reviewer-info">
+                                        <h4>Sarah J</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <h5>Perfect vintage find!</h5>
+                                    <p>I absolutely love this jacket! The fit is perfect and it's exactly as described.
+                                        The vintage character is charming, and it's become my favorite piece to layer
+                                        with. Highly recommend!</p>
+                                    <span class="review-date">Posted on October 12, 2023</span>
+                                </div>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="reviewer">
+                                    <img src="https://ui-avatars.com/api/?name=Mike+T&background=2ecc71&color=fff"
+                                        alt="Mike T" class="reviewer-avatar">
+                                    <div class="reviewer-info">
+                                        <h4>Mike T</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <h5>Great jacket, slightly smaller than expected</h5>
+                                    <p>The quality is excellent for a vintage piece. The only reason I'm giving 4 stars
+                                        is that it runs a bit small. I usually wear medium and had to exchange for a
+                                        large. Other than that, it's a great jacket!</p>
+                                    <span class="review-date">Posted on September 28, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping & Returns</h3>
+                        <h4>Shipping Information</h4>
+                        <p>We offer standard and expedited shipping options. Most orders are processed within 1-2
+                            business days and shipped via USPS or FedEx.</p>
+
+                        <div class="shipping-options">
+                            <div class="shipping-option">
+                                <i class="fas fa-truck"></i>
+                                <div class="option-info">
+                                    <h5>Standard Shipping</h5>
+                                    <p>3-5 business days - $4.99 (Free for orders over $50)</p>
+                                </div>
+                            </div>
+                            <div class="shipping-option">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div class="option-info">
+                                    <h5>Expedited Shipping</h5>
+                                    <p>2-3 business days - $9.99</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>Return Policy</h4>
+                        <p>We want you to be completely satisfied with your purchase. If you're not happy with your
+                            item, you can return it within 30 days of receipt for a full refund or exchange.</p>
+
+                        <ul>
+                            <li>Items must be in original condition</li>
+                            <li>Return shipping is the responsibility of the buyer</li>
+                            <li>Refunds will be processed within 5 business days of receiving the returned item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2>You Might Also Like</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80"
+                                alt="Denim Shirt">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Vintage Denim Shirt</h3>
+                            <p class="product-desc">Classic denim shirt from the 90s</p>
+                            <div class="product-meta">
+                                <span class="product-price">$25.00</span>
+                                <span class="product-category">Clothing</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                                alt="Leather Jacket">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Vintage Leather Jacket</h3>
+                            <p class="product-desc">Genuine leather jacket from the 80s</p>
+                            <div class="product-meta">
+                                <span class="product-price">$85.00</span>
+                                <span class="product-category">Clothing</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80"
+                                alt="Denim Overalls">
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Vintage Denim Overalls</h3>
+                            <p class="product-desc">Classic denim overalls from the 90s</p>
+                            <div class="product-meta">
+                                <span class="product-price">$45.00</span>
+                                <span class="product-category">Clothing</span>
+                            </div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>EcoFinds</span>
+                    </div>
+                    <p>Sustainable second-hand marketplace for eco-conscious shoppers</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Sell Items</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Kitchenware</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Green Street, Eco City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> support@ecofinds.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 EcoFinds. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/productDetail.js"></script>
+</body>
+
+</html>
